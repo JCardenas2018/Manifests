@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: us-user-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: us-user-deployment
+  ports:
+    - protocol: TCP
+      port: 8084
+      targetPort: 8084

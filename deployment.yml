@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: us-user-deployment
+  name: us-user
   labels:
     app: us-user
 spec:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: us-user
-        image: 76591745/user-jdk:v2
+        image: 76591745/user:v1
         ports:
         - containerPort: 8084
       restartPolicy: Always
